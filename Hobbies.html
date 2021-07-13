@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <link href="style sheet/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="Style Sheet/photo_gallery.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="author" content="Samuel Jones" />
+    <title>Digital Photography</title>
+    <link rel="icon" href="Images/website logo.png" />
+        <link href="Style Sheet/NavStyle.css"; rel="stylesheet";type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+<body>
+    <script src="JavaScript/Slide_Gallery.js" type="text/javascript"></script>
+<header>
+<script src="JavaScript/NavScripts.js"></script>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="Hobbies.html">Photography</a>
+  <a href="MemeGenerator.html">Meme Generator</a>
+  <a href="About.html">About</a>
+  <a href="Career.html">Contact</a>
+</div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+</header>
+    <br />
+<!--
+    this photo gallery was inspired by a tutorial from w3schools. The "div" sections for each image is different than that
+    in the tutorial, but the style sheet information (class "gallery") is largely similar. Follow this link for 
+    more information https://www.w3schools.com/css/css_image_gallery.asp Gathered on 9-22-19
+-->
+<section class="gallery">
+<article class="gallery";>
+    <h2 class="glry_title">Digital<br />Photography</h2>
+
+        <div class="slideshow_box">
+            <div class="slides">
+                <img src="Images/Twin Eagles_LR.jpg" style="width:100%"/>
+            </div>
+            <div class="slides">
+                <img src="Images/Low_Res_Cly-0075-2.jpg" style="width:100%"/>
+            </div>
+            <div class="slides">
+                <img src="Images/Low_Res_Cly-0183-2.jpg" style="width:100%"/>
+            </div>
+            <div class="slides">
+                <img src="Images/Eagle Montage_LR.jpg" style="width:100%"/>
+            </div>
+            <div class="slides">
+                <img src="Images/ONA-2019-5502.jpg" style="width:100%"/>
+            </div>
+            <div class="slides">
+                <img src="Images/bouolder_res.jpg" style="width:100%"/>
+            </div>
+            <div class="slides">
+                <img src="Images/Digital_Gallery/wallpaper-balloon-6181.jpg" style="width:100%"/>
+            </div>
+            <div class="slides">
+                <img src="Images/Digital_Gallery/DSC_5039_LR.jpg" style="width:100%"/>
+            </div>
+            <div class="slides">
+                <img src="Images/Digital_Gallery/Boulder_2018-5210094.jpg" style="width:100%"/>
+            </div>
+            <div class="slides">
+                <img src="Images/Digital_Gallery/Sandpoint_LR-5064-2.jpg" style="width:100%"/>
+            </div>
+            <div class="slides">
+                <img src="Images/DSC_5122.jpg" style="width:100%"/>
+            </div>
+
+
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="nex" onclick="plusSlides(1, 0)">&#10095;</a>
+        <a href="film_photo.html"><button class="button"; style="width:270px"><span>Check out my<br />film work</span></button></a>
+
+</article>
+</section>
+<article>    
+        
+        
+    <div class="txt_box" style="margin-bottom:75px;">
+       I started doing photography back in highschool. My uncle, who is a photography industry veteren,
+        taught me everything I know. I started with my mom's 35mm nikkormat because that is what I had at the time.
+        Now I mainly shoot digital, but on special ocasions I'll shoot some 35mm format with my trusty Nikon FM,
+        or sometimes break out the Bronica for some medium format goodness.
+        I mainly shoot landscapes, though I enjoy taking candid portraits of friends and wildlife photos. Check me out on 
+       <a class="insta" href="https://www.instagram.com/samueljonesphoto/" target="_blank"> instagram</a> to view more!
+    </div>
+</article>
+
+<footer>
+</footer>
+    <script>
+var slideIndex = 0;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+</script>
+</body>
+<script src="jquery-3.4.0.min.js"></script>
+</html>

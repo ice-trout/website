@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="icon" href="Images/website logo.png" />
+    <link href="Style Sheet/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="Style Sheet/NavStyle.css"; rel="stylesheet";type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+<script src="JavaScript/NavScripts.js"></script>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="Hobbies.html">Photography</a>
+  <a href="MemeGenerator.html">Meme Generator</a>
+  <a href="About.html">About</a>
+  <a href="Career.html">Contact</a>
+</div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+</header>
+
+    <script src="JavaScript/JavaScript.js"></script>
+    <div style="width:702px; background-color:white; border:solid black 2px; margin-left:auto; margin-right:auto;">
+    <iframe  style="overflow:auto; margin-left:auto; margin-right:auto;" width="700" height="500" name="meme"; ></iframe>
+    <a href="randMeme()" target="meme"></a>
+    </div>
+    <div class="txt_box">
+    <p style="margin-left:auto; margin-right:auto";> 
+        Instructions: 
+        Pick a song and press the random meme button 
+        to generate a random meme! For best results, 
+        use firefox browser in fullscreen.<br />
+        Enjoy!
+    </p>
+    <!--Wii Shop Channel and Mii Plaza music from khinsider.com copyright Nintendo-->
+    <audio controls loop>
+        <source src="Audio/02_Shop Channel.mp3" type="audio/mp3"/>
+    </audio>
+    <audio controls loop>
+        <source src="Audio/002 - Kazumi Totaka - Mii Plaza.mp3" type="audio/mp3"/>
+    </audio>
+    <input type="button" onclick="randMeme()" value="Random Meme!" />
+    </div>
+
+</body>
+
+</html>
